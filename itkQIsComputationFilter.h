@@ -51,7 +51,7 @@ public:
   itkGetMacro(RMSValue, PixelType);
   itkGetMacro(MinimumValue, PixelType);
   itkGetMacro(PeakValue, PixelType);
-  itkGetMacro(MetabolicVolume, PixelType);
+  itkGetMacro(MetabolicVolume, double);
   itkGetMacro(SegmentedVolume, float);
   itkGetMacro(PeakLocation, typename ImageType::PointType);
   itkGetMacro(MedianValue, PixelType);
@@ -60,6 +60,15 @@ public:
   itkGetMacro(UpperAdjacentValue, PixelType);
   itkGetMacro(StandardDeviation, PixelType);
   itkGetMacro(SAMValue, PixelType);
+  itkGetMacro(SAMBackground, PixelType);
+  itkGetMacro(Gly1, double);
+  itkGetMacro(Gly2, double);
+  itkGetMacro(Gly3, double);
+  itkGetMacro(Gly4, double);
+  itkGetMacro(Q1, float);
+  itkGetMacro(Q2, float);
+  itkGetMacro(Q3, float);
+  itkGetMacro(Q4, float);
 
   void CalculateMean();
   void CalculateQuartiles();
@@ -98,7 +107,23 @@ private:
   /** The segmented volume.  */
   float m_SegmentedVolume;
   /** The metabolic volume segmented.  */
-  PixelType m_MetabolicVolume;
+  double m_MetabolicVolume;
+  /** The MTV in 1st quarter of range  */
+  double m_Gly1;
+  /** The MTV in 2nd quarter of range  */
+  double m_Gly2;
+  /** The MTV in 3rd quarter of range  */
+  double m_Gly3;
+  /** The MTV in 4th quarter of range  */
+  double m_Gly4;
+  /** Distribution in 1st quarter of range  */
+  float m_Q1;
+  /** Distribution in 2nd quarter of range  */
+  float m_Q2;
+  /** Distribution in 3rd quarter of range  */
+  float m_Q3;
+  /** Distribution in 4th quarter of range  */
+  float m_Q4;
   /** The first quartile segmented value.  */
   PixelType m_FirstQuartileValue;
   /** The third quartile segmented value.  */
@@ -109,6 +134,8 @@ private:
   PixelType m_StandardDeviation;
   /** The standard added metabolic activity. */
   PixelType m_SAMValue;
+  /** SAM mean background. */
+  PixelType m_SAMBackground;
 
   /** Flag indicating if list has been generated */
   bool m_ListGenerated;
