@@ -38,7 +38,7 @@
       </constraints>
     </integer>
   </parameters>
-  <parameters advanced='true'>
+  <parameters>
     <label>Quantitative Indices Selection</label>
     <description><![CDATA[Indices to be calculated]]></description>
     <boolean>
@@ -46,7 +46,7 @@
       <label>Mean</label>
       <longflag>--mean</longflag>
       <description><![CDATA[Mean value in region of interest]]></description>
-      <default>true</default>
+      <default>false</default>
     </boolean>
     <boolean>
       <name>Variance</name>
@@ -95,7 +95,7 @@
       <label>Median</label>
       <longflag>--median</longflag>
       <description><![CDATA[Median value in region of interest]]></description>
-      <default>true</default>
+      <default>false</default>
     </boolean>
     <boolean>
       <name>Quart3</name>
@@ -196,7 +196,7 @@
       <default>false</default>
     </boolean>
   </parameters>
-  <parameters>
+  <parameters advanced='true'>
     <label>Quantitative Indices Output</label>
     <description><![CDATA[Output of quantitative indices calculation]]></description>
     <string>
