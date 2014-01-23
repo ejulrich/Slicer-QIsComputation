@@ -118,7 +118,7 @@ int main( int argc, char * argv[] )
         writeFile << "Q2_s = " << (double) qiCompute->GetQ2() << endl;
         cout << "Q2: " << (double) qiCompute->GetQ2() << endl;
       }
-      if(Q1){
+      if(Q3){
         writeFile << "Q3_s = " << (double) qiCompute->GetQ3() << endl;
         cout << "Q3: " << (double) qiCompute->GetQ3() << endl;
       }
